@@ -1,16 +1,29 @@
 # Fetch-Rewards
 
-running test: 
+This is a solution to Fetch Rewards Coding Exercise - SDET
 
-install libraries to run project:
+How to execute the solution:
+
+This project requieres Node JS:  https://nodejs.org/en/download/
+
+
+Setup: 
+from the project folder run this command:
+<code>
 npm install
+</code>
 
-running test
+Execute solution script
+<code>
 npm run cypress:run
+</code>
 
-running with visual ui:
+Execute solution script in chrome
+<code>
+npm run cypress:run:chrome
+</code>
 
-npx cypress open
-click on spec.js
+View output result in result.txt file
+
 
 
