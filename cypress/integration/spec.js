@@ -52,7 +52,6 @@ describe("Finding a Fake Bar", () => {
       cy.get('#reset')
         .invoke("text")
         .then((weighResult) => {
-          //cy.get('#reset').click()
           cy.xpath('//button[text()="Reset"]').click();
           if (weighResult.includes(">")) {
             if (secondHalf.length === 1) {
