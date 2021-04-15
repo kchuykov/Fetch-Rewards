@@ -1,0 +1,26 @@
+{
+  "name": "fetch-rewards",
+  "version": "1.0.0",
+  "description": "exercise solution project",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kchuykov/Fetch-Rewards.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kchuykov/Fetch-Rewards/issues"
+  },
+  "homepage": "https://github.com/kchuykov/Fetch-Rewards#readme",
+  "devDependencies": {
+    "cypress": "^7.1.0",
+    "cypress-xpath": "^1.6.2"
+  },
+  "scripts": {
+    "cypress:open": "./node_modules/.bin/cypress open",
+    "cypress:run": "./node_modules/.bin/cypress run",
+    "cypress:run:chrome": "./node_modules/.bin/cypress run --browser chrome --no-exit",
+    "cypress:run:record": "./node_modules/.bin/cypress run --record"
+  }
+}

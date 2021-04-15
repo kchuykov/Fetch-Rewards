@@ -1,0 +1,9 @@
+{
+  "baseUrl": "http://ec2-54-208-152-154.compute-1.amazonaws.com/",
+  "fixturesFolder": false,
+  "supportFile": "cypress/support/index.js",
+  "pluginsFile": false,
+  "defaultCommandTimeout": 1000
+
+
+}
