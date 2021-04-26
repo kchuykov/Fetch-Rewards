@@ -37,6 +37,11 @@ describe("Finding a Fake Bar", () => {
     // once it only has one fake bar it will call the function to validate
     // the fake bar.
     function checkBars(bars) {
+      let lastBar 
+      if (bars.length % 2 == 1) {
+        lastBar = bars.pop()
+      }
+
       const half = Math.ceil(bars.length / 2);
       const firstHalf = bars.splice(0, half);
       const secondHalf = bars.splice(-half);
@@ -51,7 +56,23 @@ describe("Finding a Fake Bar", () => {
       //cy.get(".game-info ol li:last-child")
       cy.get('#reset')
         .invoke("text")
-        .then((weighResult) => {
+         .then((weighResult) => {
+        //   cy.xpath('//button[text()="Reset"]').click();
+        //   if (weighResult.includes(">")) {
+        //     if (secondHalf.length === 1) {
+        //       clickAndValidateBar(secondHalf[0]);
+        //     } else {
+        //       checkBars(secondHalf);
+        //     }
+        //   } else {
+        //     if (firstHalf.length === 1) {
+        //       clickAndValidateBar(firstHalf[0]);
+        //     } else {
+        //       checkBars(firstHalf);
+        //     }
+        //   }
+        // }
+        {
           cy.xpath('//button[text()="Reset"]').click();
           if (weighResult.includes(">")) {
             if (secondHalf.length === 1) {
@@ -59,14 +80,17 @@ describe("Finding a Fake Bar", () => {
             } else {
               checkBars(secondHalf);
             }
-          } else {
-            if (firstHalf.length === 1) {
+          } else if (weighResult.includes("<")) {
+              if (firstHalf.length === 1) {
               clickAndValidateBar(firstHalf[0]);
             } else {
               checkBars(firstHalf);
             }
+          } else {
+            clickAndValidateBar(lastBar)
           }
-        });
+        }
+      });
     }
   });
 });
