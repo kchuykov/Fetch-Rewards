@@ -3,7 +3,7 @@
   "fixturesFolder": false,
   "supportFile": "cypress/support/index.js",
   "pluginsFile": false,
-  "defaultCommandTimeout": 1000
-
+  "defaultCommandTimeout": 1000,
+  "projectId": "First Test Project"
 
 }
